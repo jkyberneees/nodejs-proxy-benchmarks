@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-proxy-benchmarks",
+  "version": "1.0.0",
+  "description": "Experimental Node.js HTTP proxy libraries benchmarks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkyberneees/nodejs-proxy-benchmarks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkyberneees/nodejs-proxy-benchmarks/issues"
+  },
+  "homepage": "https://github.com/jkyberneees/nodejs-proxy-benchmarks#readme",
+  "dependencies": {
+    "fast-proxy": "^1.7.0",
+    "http-proxy": "^1.18.1"
+  }
+}
