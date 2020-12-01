@@ -19,6 +19,20 @@ Requests/sec:   9467.68
 Transfer/sec:      1.22MB
 ```
 
+> Hardware: `MacBook Pro (16-inch, 2019, 2,6 GHz 6-Core Intel Core i7)`  
+> Node.js version: `v14.15.1`
+```bash
+wrk -t8 -c50 -d20s http://127.0.0.1:8080/service/hi
+Running 20s test @ http://127.0.0.1:8080/service/hi
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.45ms    1.90ms  64.54ms   97.32%
+    Req/Sec     1.38k   169.16     1.51k    95.06%
+  220362 requests in 20.02s, 28.37MB read
+Requests/sec:  11006.24
+Transfer/sec:      1.42MB
+```
+
 ### http-proxy (^1.18.1)
 > Hardware: `MacBook Pro (13-inch, 2020, 1,4 GHz Quad-Core Intel Core i5)`  
 > Node.js version: `v14.15.0`
@@ -33,3 +47,19 @@ Running 20s test @ http://127.0.0.1:8080/service/hi
 Requests/sec:    408.28
 Transfer/sec:     42.66KB
 ```
+
+> Hardware: `MacBook Pro (16-inch, 2019, 2,6 GHz 6-Core Intel Core i7)`  
+> Node.js version: `v14.15.1`
+```bash
+wrk -t8 -c50 -d20s http://127.0.0.1:8080/service/hi
+Running 20s test @ http://127.0.0.1:8080/service/hi
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    29.10ms   24.22ms 251.42ms   97.66%
+    Req/Sec   201.41     82.79   363.00     70.81%
+  8206 requests in 20.01s, 857.46KB read
+  Socket errors: connect 0, read 0, write 0, timeout 48
+Requests/sec:    410.18
+Transfer/sec:     42.86KB
+```
+
