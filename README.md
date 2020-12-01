@@ -3,9 +3,10 @@ Experimental Node.js HTTP proxy libraries benchmarks
 
 # Benchmark Rounds 
 ## Mac OS
+
 ### fast-proxy (^1.7.0)
-> Hardware: MacBook Pro (13-inch, 2020, 1,4 GHz Quad-Core Intel Core i5  
-> Node.js version: v14.15.0
+> Hardware: `MacBook Pro (13-inch, 2020, 1,4 GHz Quad-Core Intel Core i5)`  
+> Node.js version: `v14.15.0`
 ```bash
 wrk -t8 -c50 -d20s http://127.0.0.1:8080/service/hi
 Running 20s test @ http://127.0.0.1:8080/service/hi
@@ -18,10 +19,9 @@ Requests/sec:   9467.68
 Transfer/sec:      1.22MB
 ```
 
-
 ### http-proxy (^1.18.1)
-> Hardware: MacBook Pro (13-inch, 2020, 1,4 GHz Quad-Core Intel Core i5  
-> Node.js version: v14.15.0
+> Hardware: `MacBook Pro (13-inch, 2020, 1,4 GHz Quad-Core Intel Core i5)`  
+> Node.js version: `v14.15.0`
 ```bash
 wrk -t8 -c50 -d20s http://127.0.0.1:8080/service/hi
 Running 20s test @ http://127.0.0.1:8080/service/hi
