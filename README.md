@@ -79,3 +79,6 @@ Requests/sec:    410.18
 Transfer/sec:     42.86KB
 ```
 
+## Linux OS
+### Community discussion:
+- https://github.com/fastify/fast-proxy/issues/41#issuecomment-737048202
