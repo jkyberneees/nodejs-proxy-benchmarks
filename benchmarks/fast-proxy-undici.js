@@ -9,6 +9,12 @@ const { proxy: forward } = require('fast-proxy')({
   }
 })
 const proxy = http.createServer((req, res) => {
-  forward(req, res, req.url, {})
+  forward(req, res, req.url, {
+    rewriteRequestHeaders (req, headers) {
+      delete headers.connection
+
+      return headers
+    }
+  })
 })
 proxy.listen(8080)
