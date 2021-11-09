@@ -4,21 +4,37 @@ Experimental Node.js HTTP proxy libraries benchmarks
 # Benchmark Rounds 
 ## Mac OS
 
-### fast-proxy (^1.7.0)
+### fast-proxy-lite (^1.0.1)
 > Hardware: `MacBook Pro (13-inch, 2020, 1,4 GHz Quad-Core Intel Core i5)`  
-> Node.js version: `v14.15.0`
+> Node.js version: `v17.0.1`
 ```bash
-wrk -t8 -c50 -d20s http://127.0.0.1:8080/service/hi
-Running 20s test @ http://127.0.0.1:8080/service/hi
-  8 threads and 50 connections
+wrk -t4 -c20 -d5s http://127.0.0.1:8080/service/hi
+Running 5s test @ http://127.0.0.1:8080/service/hi
+  4 threads and 20 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     5.07ms  640.68us  21.39ms   88.03%
-    Req/Sec     1.19k    67.37     1.49k    82.88%
-  189551 requests in 20.02s, 24.40MB read
-Requests/sec:   9467.68
-Transfer/sec:      1.22MB
+    Latency     2.02ms  334.84us   6.42ms   90.69%
+    Req/Sec     2.49k   223.49     2.62k    90.20%
+  50546 requests in 5.10s, 6.51MB read
+Requests/sec:   9907.92
+Transfer/sec:      1.28MB
 ```
 
+### fast-proxy (^1.8.0)
+> Hardware: `MacBook Pro (13-inch, 2020, 1,4 GHz Quad-Core Intel Core i5)`  
+> Node.js version: `v17.0.1`
+```bash
+wrk -t4 -c20 -d5s http://127.0.0.1:8080/service/hi
+Running 5s test @ http://127.0.0.1:8080/service/hi
+  4 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.28ms    1.24ms  31.61ms   96.14%
+    Req/Sec     2.30k   349.90     2.71k    88.67%
+  46508 requests in 5.10s, 5.99MB read
+Requests/sec:   9117.27
+Transfer/sec:      1.17MB
+```
+
+### fast-proxy (^1.7.0)
 > Hardware: `MacBook Pro (16-inch, 2019, 2,6 GHz 6-Core Intel Core i7)`  
 > Node.js version: `v14.15.1`
 ```bash
